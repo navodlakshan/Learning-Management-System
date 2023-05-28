@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="lms.admin.Createprofile">
+  <grid id="27dc6" binding="createprofile" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="568" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-9978951"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="3d55a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="36" style="1"/>
+          <text value="CREATE PROFILE"/>
+        </properties>
+      </component>
+      <component id="8166" class="javax.swing.JButton" binding="LECTUREPROFILEButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="picture/icons8-contacts-52.png"/>
+          <text value="LECTURE PROFILE"/>
+        </properties>
+      </component>
+      <component id="439d0" class="javax.swing.JButton" binding="tOFFICERPROFILEButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="picture/icons8-contacts-52.png"/>
+          <text value="T-OFFICER PROFILE"/>
+        </properties>
+      </component>
+      <component id="e6de5" class="javax.swing.JButton" binding="STUDENTPROFILEButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="picture/icons8-contacts-52.png"/>
+          <text value="STUDENT PROFILE"/>
+        </properties>
+      </component>
+      <hspacer id="3119f">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="4" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1b2a4">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="aefe" class="javax.swing.JButton" binding="ADMINPROFILEButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="picture/icons8-contacts-52.png"/>
+          <text value="ADMIN PROFILE"/>
+        </properties>
+      </component>
+      <component id="4b981" class="javax.swing.JButton" binding="BACKButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="BACK"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
