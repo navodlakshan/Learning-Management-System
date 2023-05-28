@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="lms.lecturer.ViewStudentMedicalRecords">
+  <grid id="27dc6" binding="panMedicalDetails" layout-manager="GridLayoutManager" row-count="9" column-count="15" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="640" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-5201671"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="1a857" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="13" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-9258197"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <scrollpane id="bd74">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-3426055"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9dee" class="javax.swing.JTable" binding="tblMedical">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <hspacer id="3d392">
+        <constraints>
+          <grid row="4" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="d113b">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="13" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="887d4">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="13" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="10b1">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="5e07e" class="javax.swing.JLabel" binding="studentID">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Consolas" size="16" style="0"/>
+          <text value="Student ID : "/>
+        </properties>
+      </component>
+      <vspacer id="ee1d3">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="12" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="56737" class="javax.swing.JTextField" binding="txtStudentID">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="10" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-328966"/>
+        </properties>
+      </component>
+      <component id="56e51" class="javax.swing.JButton" binding="btnShow">
+        <constraints>
+          <grid row="2" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-7669299"/>
+          <text value="Show"/>
+        </properties>
+      </component>
+      <component id="7b6e6" class="javax.swing.JButton" binding="btnBack">
+        <constraints>
+          <grid row="7" column="11" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-7669299"/>
+          <text value="Back"/>
+        </properties>
+      </component>
+      <component id="6a2c3" class="javax.swing.JLabel" binding="lblDisplay">
+        <constraints>
+          <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="aaecd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Medical ID:"/>
+        </properties>
+      </component>
+      <component id="c8caf" class="javax.swing.JTextField" binding="txtMedicaId">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fa6d9" class="javax.swing.JButton" binding="SHOWButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-7669299"/>
+          <text value="SHOW"/>
+        </properties>
+      </component>
+      <grid id="d8228" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="13" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-5201671"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="35aa4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12828863"/>
+              <font name="Britannic Bold" size="28" style="0"/>
+              <text value="View Student Medical Records"/>
+            </properties>
+          </component>
+          <hspacer id="157d9">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
