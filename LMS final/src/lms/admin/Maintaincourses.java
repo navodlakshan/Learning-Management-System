@@ -60,7 +60,5 @@ public class Maintaincourses extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Maintaincourses o=new Maintaincourses();
-    }
+
 }

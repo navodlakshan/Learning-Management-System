@@ -68,7 +68,5 @@ public class RemoveTimetable extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        RemoveTimetable l=new RemoveTimetable();
-    }
+
 }

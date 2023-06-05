@@ -114,10 +114,6 @@ public class AddCourses extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-
-        AddCourses obj=new AddCourses();
-    }
 }
 
 

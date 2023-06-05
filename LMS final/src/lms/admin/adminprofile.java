@@ -15,7 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class adminprofile extends JFrame{
+public class adminprofile extends JFrame implements User{
     private JTextField id;
     private JTextField fname;
     private JTextField lname;
@@ -35,6 +35,20 @@ public class adminprofile extends JFrame{
 
     String imagePath;
     MyDbConnector mdc;
+    Connection con;
+
+    PreparedStatement stmt;
+    PreparedStatement stmt1;
+    PreparedStatement stmt2;
+
+    String sId;
+    String sName;
+    String sLname;
+    String sEmail;
+    String sdob;
+    String sGender;
+    String sPnumber;
+    String sPassword;
 
     public adminprofile() {
 
@@ -44,6 +58,9 @@ public class adminprofile extends JFrame{
         setLocation(500,100);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+
+        mdc = new MyDbConnector();
+        con = mdc.getMyConnection();
 
         browseButton.addActionListener(new ActionListener() {
             @Override
@@ -81,63 +98,20 @@ public class adminprofile extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
 
-                    String sId = id.getText();
-                    String sName = fname.getText();
-                    String sLname= lname.getText();
-                    String sEmail = email.getText();
-                    String sdob=birthday.getText();
-                    String sGender = (String) gender.getSelectedItem();
-                    String sDepartment = (String) department.getSelectedItem();
-                    String sPnumber = phono.getText();
-                    String sPassword = password.getText();
+                     sId = id.getText();
+                     sName = fname.getText();
+                     sLname= lname.getText();
+                     sEmail = email.getText();
+                     sdob=birthday.getText();
+                     sGender = (String) gender.getSelectedItem();
+                     sPnumber = phono.getText();
+                     sPassword = password.getText();
 
-                mdc = new MyDbConnector();
-                Connection con = mdc.getMyConnection();
-                PreparedStatement stmt;
-                PreparedStatement stmt1;
-                PreparedStatement stmt2;
-
-                try {
-                    String query = "insert into User (id,First_Name,Last_Name,Gender,Photo,E_mail,Password,DOB,Department_id) VALUES (?, ?, ?, ?, ?, ?, ?, ? ,?)";
-                    String query1 = "insert into Admin (User_Id) VALUES (?)";
-                    String query2 = "insert into User_Phone(User_Id,Phone_No) VALUES (?,?)";
-
-                    stmt = con.prepareStatement(query);
-                    stmt.setString(1, sId);
-                    stmt.setString(2, sName);
-                    stmt.setString(3, sLname);
-                    stmt.setString(4, sGender);
-                    stmt.setString(5, imagePath);
-                    stmt.setString(6, sEmail);
-                    stmt.setString(7, sPassword);
-                    stmt.setString(8, sdob);
-                    stmt.setString(9, sDepartment);
-
-                    stmt.executeUpdate();
-
-                    stmt1 = con.prepareStatement(query1);
-                    stmt1.setString(1, sId);
-
-                    stmt1.executeUpdate();
-
-                    stmt2 = con.prepareStatement(query2);
-                    stmt2.setString(1, sId);
-                    stmt2.setString(2, sPnumber);
-
-                    stmt2.execute();
-                    JOptionPane.showMessageDialog(null, "ADDED");
+                     addDetails();
+                     addDetails(0);
+                     addDetails("x","y");
 
 
-                } catch (SQLException ex) {
-                    System.out.println("Error in inserting a Student record" + ex.getMessage());
-                }finally {
-                    try {
-                        //close the lms.connection
-                        con.close();
-                    } catch (SQLException x) {
-                        System.out.println("Error in closing the lms.connection" + x.getMessage());
-                    }
-                }
 
             }
 
@@ -172,8 +146,78 @@ public class adminprofile extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
+    public void addDetails(){
 
-        adminprofile obj=new adminprofile();
+        try {
+            String query = "insert into User (id,First_Name,Last_Name,Gender,Photo,E_mail,Password,DOB) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+            stmt = con.prepareStatement(query);
+            stmt.setString(1, sId);
+            stmt.setString(2, sName);
+            stmt.setString(3, sLname);
+            stmt.setString(4, sGender);
+            stmt.setString(5, imagePath);
+            stmt.setString(6, sEmail);
+            stmt.setString(7, sPassword);
+            stmt.setString(8, sdob);
+
+            stmt.executeUpdate();
+
+
+
+        } catch (SQLException ex) {
+            System.out.println("Error in inserting a Student record" + ex.getMessage());
+        }
+
     }
+
+    public void addDetails(int a){
+
+        try {
+
+            String query1 = "insert into Admin (User_Id) VALUES (?)";
+
+            stmt1 = con.prepareStatement(query1);
+            stmt1.setString(1, sId);
+
+            stmt1.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            System.out.println("Error in inserting a Student record" + ex.getMessage());
+        }
+
+    }
+
+
+    @Override
+    public void addDetails(String a,String b){
+
+        try {
+
+            String query2 = "insert into User_Phone(User_Id,Phone_No) VALUES (?,?)";
+
+            stmt2 = con.prepareStatement(query2);
+            stmt2.setString(1, sId);
+            stmt2.setString(2, sPnumber);
+
+            stmt2.execute();
+            JOptionPane.showMessageDialog(null, "ADDED");
+
+
+        } catch (SQLException ex) {
+            System.out.println("Error in inserting a Student record" + ex.getMessage());
+        }finally {
+            try {
+                //close the lms.connection
+                con.close();
+            } catch (SQLException x) {
+                System.out.println("Error in closing the lms.connection" + x.getMessage());
+            }
+        }
+
+
+    }
+
+
 }

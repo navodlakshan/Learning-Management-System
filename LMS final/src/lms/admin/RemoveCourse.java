@@ -70,7 +70,5 @@ public class RemoveCourse extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        RemoveCourse x=new RemoveCourse();
-    }
+
 }

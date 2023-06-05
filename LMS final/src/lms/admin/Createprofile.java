@@ -69,7 +69,4 @@ public class Createprofile extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Createprofile o=new Createprofile();
-    }
 }

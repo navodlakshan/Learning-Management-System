@@ -52,7 +52,5 @@ public class MaintainTimetables extends JFrame{
     });
 }
 
-    public static void main(String[] args) {
-        MaintainTimetables o=new MaintainTimetables();
-    }
+
 }

@@ -278,16 +278,6 @@
               <text value="Position"/>
             </properties>
           </component>
-          <component id="16ad5" class="javax.swing.JTextField" binding="position">
-            <constraints>
-              <grid row="9" column="2" row-span="1" col-span="10" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <font name="Consolas" size="18"/>
-            </properties>
-          </component>
           <component id="13926" class="javax.swing.JLabel">
             <constraints>
               <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -305,6 +295,18 @@
             </constraints>
             <properties>
               <font name="Consolas" size="18"/>
+            </properties>
+          </component>
+          <component id="c4bba" class="javax.swing.JComboBox" binding="position">
+            <constraints>
+              <grid row="9" column="2" row-span="1" col-span="10" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="18"/>
+              <model>
+                <item value="temporary"/>
+                <item value="permanent"/>
+              </model>
             </properties>
           </component>
         </children>

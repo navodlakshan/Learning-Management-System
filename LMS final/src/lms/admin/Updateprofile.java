@@ -215,7 +215,5 @@ public class Updateprofile extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Updateprofile o=new Updateprofile();
-    }
+
 }

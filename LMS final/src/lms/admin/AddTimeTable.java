@@ -133,9 +133,6 @@ public class AddTimeTable extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
 
-        AddTimeTable obj=new AddTimeTable();
-    }
-    }
+}
 

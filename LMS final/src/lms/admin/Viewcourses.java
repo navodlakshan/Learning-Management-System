@@ -53,7 +53,5 @@ public class Viewcourses extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Viewcourses o= new Viewcourses();
-    }
+
 }

@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class RemoveNotices extends JFrame{
-    private JTextField title;
+    private JTextField id;
     private JButton cancelButton;
     private JButton removeButton;
     private JPanel noticep;
@@ -27,16 +27,16 @@ public class RemoveNotices extends JFrame{
         removeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String ntitle=title.getText();
+                String nid= id.getText();
                 mdc = new MyDbConnector();
                 Connection con = mdc.getMyConnection();
                 PreparedStatement stmt;
 
                 try {
 
-                    String query = "DELETE FROM Notice WHERE Title = ?";
+                    String query = "DELETE FROM Notice WHERE Notice_ID = ?";
                     stmt = con.prepareStatement(query);
-                    stmt.setString(1,ntitle);
+                    stmt.setString(1,nid);
                     stmt.execute();
                     JOptionPane.showMessageDialog(null, "sussfully remove");
 
@@ -67,7 +67,5 @@ public class RemoveNotices extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        RemoveNotices o=new RemoveNotices();
-    }
+
 }

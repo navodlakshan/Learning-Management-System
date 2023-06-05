@@ -74,9 +74,5 @@ public class Adminpanal extends JFrame{
     });
 }
 
-    public static void main(String[] args) {
-
-        Adminpanal obj=new Adminpanal();
-    }
 
 }

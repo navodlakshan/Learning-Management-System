@@ -56,7 +56,5 @@ public class Viewnotices extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Viewnotices o=new Viewnotices();
-    }
+
 }

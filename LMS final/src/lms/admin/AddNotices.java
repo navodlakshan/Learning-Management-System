@@ -140,10 +140,7 @@ public class AddNotices extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
 
-        AddNotices obj=new AddNotices();
-    }
 }
 
 

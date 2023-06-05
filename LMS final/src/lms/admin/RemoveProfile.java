@@ -168,7 +168,5 @@ public class RemoveProfile extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
-        RemoveProfile o=new RemoveProfile();
-    }
+
 }

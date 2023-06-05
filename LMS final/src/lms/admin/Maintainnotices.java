@@ -62,7 +62,4 @@ public class Maintainnotices extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        Maintainnotices o=new Maintainnotices();
-    }
 }
