@@ -26,9 +26,8 @@ public class ViewStudentMedical extends JFrame{
 
     public ViewStudentMedical(Connection con) {
         setContentPane(panMedicalDetails);
-        setTitle("View Student Medical Details");
-        setSize(650, 620);
-        setLocation(500, 100);
+        setTitle("Medical Details");
+        setSize(1600, 825);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 

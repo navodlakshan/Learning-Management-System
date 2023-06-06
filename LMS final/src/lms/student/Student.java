@@ -50,7 +50,7 @@ public class Student extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                CourseDetails view = new CourseDetails();
+                CourseDetails view = new CourseDetails(con);
                 view.setVisible(true);
             }
         });
@@ -58,7 +58,7 @@ public class Student extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                AttendanceDetails view = new AttendanceDetails();
+                AttendanceDetails view = new AttendanceDetails(con);
                 view.setVisible(true);
 
             }
@@ -67,7 +67,7 @@ public class Student extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                Grades view = new Grades();
+                Grades view = new Grades(con);
                 view.setVisible(true);
             }
         });

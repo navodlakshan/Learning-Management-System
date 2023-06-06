@@ -22,7 +22,7 @@ public class UpdateProfile extends JFrame{
     private JTextField txtTPField;
     private JButton browseButton;
     private JButton saveChangesButton;
-    private JButton cancelButton;
+    private JButton BackButton;
     private JPanel panUpdate;
 
     String eMail;
@@ -31,10 +31,9 @@ public class UpdateProfile extends JFrame{
     MyDbConnector mdc;
     UpdateProfile (String userId){
         add(panUpdate);
-        setSize(800,600);
+        setSize(1600, 825);
         setTitle("UPDATE STUDENT PROFILE");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setLocation(310,90);
         setVisible(true);
 
         browseButton.addActionListener(new ActionListener() {
@@ -91,7 +90,7 @@ public class UpdateProfile extends JFrame{
             }
         });
 
-        cancelButton.addActionListener(new ActionListener() {
+        BackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);

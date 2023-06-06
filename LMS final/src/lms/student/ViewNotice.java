@@ -24,10 +24,9 @@ public class ViewNotice extends JFrame{
 
     public ViewNotice(Connection con,String userName){
         add(panViewNotice);
-        setSize(900,600);
-        setTitle("LMS-View Notices");
+        setSize(1600,825);
+        setTitle("Notices");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(300,80);
         setVisible(true);
 
         this.con=con;
@@ -35,7 +34,6 @@ public class ViewNotice extends JFrame{
         int columnCount=0;
         String[] columnNames;
         Object[][] data;
-        //={{"2002-01-20","Invitation","DICT"},{"2005-06-06","Results","DET"},{"2023-02-19","Vacancies","DBST"}};
 
         try {
             String query="SELECT Notice_ID,Submit_Date,Title,Department_ID FROM notice";

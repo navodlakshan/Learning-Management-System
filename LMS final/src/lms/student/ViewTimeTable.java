@@ -27,8 +27,7 @@ public class ViewTimeTable extends JFrame{
 
         setContentPane(jpanal);
         setTitle("View TimeTable");
-        setSize(750,750);
-        setLocation(500,100);
+        setSize(1600,825);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
