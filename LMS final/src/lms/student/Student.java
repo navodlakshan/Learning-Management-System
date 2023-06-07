@@ -19,6 +19,7 @@ public class Student extends JFrame {
     private JButton logOutButton;
     private JPanel Student;
     private JLabel profileLabel;
+    private JButton courseRegistrationButton;
     private Connection con;
     String sid = null;
 
@@ -103,6 +104,14 @@ public class Student extends JFrame {
                 Login view = new Login();
                 view.setVisible(true);
 
+            }
+        });
+        courseRegistrationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                courseregistration view=new courseregistration();
+                view.setVisible(true);
             }
         });
     }
