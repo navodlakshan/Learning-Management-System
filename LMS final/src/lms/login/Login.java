@@ -80,7 +80,7 @@ public class Login extends JFrame implements LoginProcess {
             String query3 = "SELECT * FROM  Lecturer";
             String query4 = "SELECT * FROM  Student";
 
-            ResultSet rs1 = stmt.executeQuery(query);
+            ResultSet rs1 = stmt.executeQuery(query1);
 
             while(rs1.next())
             {

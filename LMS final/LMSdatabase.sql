@@ -78,10 +78,10 @@
   Department_ID varchar(5)
 );
   
-  CREATE TABLE course_registration (
-  Registered_ID varchar(7)PRIMARY KEY,
-  Level int(1),
-  Semester int(1),
+   CREATE TABLE course_registration (
+  Registered_ID INT PRIMARY KEY AUTO_INCREMENT,
+  Level varchar(1),
+  Semester varchar(1),
   course_code1 varchar(30),
   course_code2 varchar(30),
   course_code3 varchar(30),
@@ -90,7 +90,6 @@
 );
 
 
-  
   CREATE TABLE registered_course (
   Registered_ID varchar(7),
   Course_ID varchar(7)
@@ -322,45 +321,12 @@ insert into mark(Eligibility,SGPA,CGPA,Grade,Quiz1,Quiz2,Quiz3,Quiz4,Assessment1
 End_Theory,End_Practical,Final_Marks,Lecturer_ID,Student_ID,Course_ID)
 values("Eli",3.4,3.7,"b",12,15,13,15,20,30,25,25,47,35,68,"Lec001","stu002","Tp1212");
   
-insert into course (Course_ID,Course_Name,Course_Type,No_Of_Credit,Total_Lecture_Hours,GPA_Status,Department_ID)
-values();
-
-
-insert into course_registration( Registered_ID,Level,Semester,course_code1,course_code2,course_code3,course_code4,Student_ID)
-values('Reg_001',2,2,"ICT001","ICT002","ICT003","ICT004",'Stu_001');
 
 
 
-insert into registered_course (Registered_ID,Course_ID)
-values('','');
-insert into registered_course (Registered_ID,Course_ID)
-values('','');
-insert into registered_course (Registered_ID,Course_ID)
-values('','');
-insert into registered_course (Registered_ID,Course_ID)
-values('','');
-insert into registered_course (Registered_ID,Course_ID)
-values('','');
+
+
   
-
-insert into Lecture_Mateial(Description,Material,Course_ID,Lecturer_ID)
-values();
-
-
- insert into Attendance(Date,Time,Course_ID,Student_id)
- values();
-   
-  
- insert into Time_Table(TimeTable_Id,Time_Table,Department_ID,Admin_ID)
- values();
-
-
-insert into medical (Absent_Date,Committe_Desicion,Medical_document,Student_id)
-values( );
-
-insert into request_course(Course_id,Medical_id)
-values();
-
 
      
     
